@@ -1,0 +1,15 @@
+<h1>Hello world this is hello!</h1>
+
+<%= 1+1 %> <br>
+<% target = "Worlds" %>
+<%= "Hello #{target}" %> <br>
+
+<% @ar.each do |n| %>
+    <b><%= n %></b> <br>
+<% end %>
+
+<br>
+
+<a href="/demo/index"> Home page 1 </a> <br>
+<%= link_to('Home Page 2', '/demo/index') %> <br>
+<%= link_to('Home Page 3 with parameters', {:action => 'index', :page => 5, :id => 20}) %> <br>
