@@ -3,33 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple CMS: <%= @page_title || "Admin Area" %> </title>
-    <style>
-        th,td {
-            width: 120px;
-            text-align: center;
-        }
-        table, th,td {
-            border: 1px solid;
-            border-collapse: collapse;
-        }
-
-        span.status{ 
-            display: block; 
-            width: 10px; 
-            height: 10px;
-            margin: .25em auto;
-            padding: 0;
-            border: 1px solid #000000;
-        }
-        span.status.true {
-            background: green;
-            color: green;
-        }
-        span.status.false {
-            background: red;
-            color: red;
-        }
-    </style>
+    <%= stylesheet_link_tag('admin', media: 'all') %>
 </head>
 <body>
     <% if !flash[:notice].blank? %>

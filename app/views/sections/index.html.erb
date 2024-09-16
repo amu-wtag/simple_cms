@@ -12,12 +12,12 @@
     <tr>
         <td> <%= section.position %> </td>
         <td> <%= section.name %> </td>
-        <td> <%= section.visible ? 'Yes' : 'No' %> </td>
+        <!-- <td> <%= section.visible ? 'Yes' : 'No' %> </td> -->
+        <td> <%= status_tag(section.visible) %> </td>
         <td> 
             <%= link_to("Show", section_path(section), :class => 'action show') %> 
             <%= link_to("Edit", edit_section_path(section), :class => 'action edit') %> 
             <%= link_to("Delete", delete_section_path(section), :class => 'action delete') %> 
-
         </td>
     </tr> 
     <% end %>
