@@ -4,27 +4,27 @@
     </div>
 <% end %>
 
-<%= link_to("<< Back to list", subjects_path, :class => 'back-link') %>
+<%= link_to("<< Back to list", pages_path, :class => 'back-link') %>
 
 <table>
     <tr>
         <th> Name </th>
-        <td> <%= @subject.name %> </td>
+        <td> <%= @page.name %> </td>
     </tr>
     <tr>
         <th> Position </th>
-        <td> <%= @subject.position %> </td>
+        <td> <%= @page.position %> </td>
     </tr>
     <tr>
         <th> Visible </th>
-        <td> <%= @subject.visible ? 'true' : 'false' %> </td>
+        <td> <%= @page.visible ? 'true' : 'false' %> </td>
     </tr>
     <tr>
         <th> Created </th>
-        <td> <%= @subject.created_at %> </td>
+        <td> <%= @page.created_at %> </td>
     </tr>
     <tr>
         <th> Updated </th>
-        <td> <%= @subject.updated_at %> </td>
+        <td> <%= @page.updated_at %> </td>
     </tr>
 </table>

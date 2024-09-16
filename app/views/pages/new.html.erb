@@ -1,0 +1,24 @@
+<%= link_to("<< Back to list", pages_path, :class => 'back-link') %>
+
+<div class="pages new">
+    <h1>Create page</h1>
+    <%= form_for(@page, :url => pages_path, :method => 'post') do |f| %>
+    <table>
+        <tr>
+            <th> Name </th>
+            <td> <%= f.text_field(:name) %> </td>
+        </tr>
+        <tr>
+            <th> Position </th>
+            <td> <%= f.text_field(:position) %> </td>
+        </tr>
+        <tr>
+            <th> Visible </th>
+            <td> <%= f.text_field(:visible) %> </td>
+        </tr>
+    </table>
+    <div class="form-buttons">
+        <%= f.submit("Create Page") %>
+    </div>
+    <% end %>
+</div>

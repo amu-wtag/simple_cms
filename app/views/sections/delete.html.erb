@@ -1,0 +1,12 @@
+<%= link_to("<< Back to list", sections_path, :class => 'back-link') %>
+
+<div>
+    <h2>Delete Section</h2>
+    <%= form_for(@section, :method => 'delete') do |f| %>
+        <p>Are you sure you want to permanently delete the Section named <b><%= f.object.name %></b>?</p>
+        <div>
+            <%= f.submit("Delete Section", style: "background-color: red; color: white;") %>
+        </div>
+    <% end %>
+    
+</div>
