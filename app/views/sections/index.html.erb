@@ -1,5 +1,5 @@
-<h1>Section#index</h1>
 
+<h1>Section#index</h1>
 <%= link_to("Add new Section", new_section_path, :class => 'action new')%>
 <table class="listing">
     <tr class="header">
@@ -22,3 +22,7 @@
     </tr> 
     <% end %>
 </table>
+
+<p>Current time: <%= Time.now.strftime("%I:%M:%S %p") %></p>
+<p>Current date: <%= Time.now.strftime("%B %d, %Y") %></p>
+
