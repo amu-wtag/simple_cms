@@ -1,4 +1,5 @@
 class SubjectsController < ApplicationController
+  layout 'admin'
   def index
     @subjects = Subject.sorted
     # render('index') #by default rails will look for index

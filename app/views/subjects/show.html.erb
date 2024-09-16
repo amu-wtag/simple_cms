@@ -1,9 +1,4 @@
-<% if !flash[:notice].blank? %>
-    <div class="notice">
-        <%= flash[:notice] %>
-    </div>
-<% end %>
-
+<% @page_title = "Show Subject" %>
 <%= link_to("<< Back to list", subjects_path, :class => 'back-link') %>
 
 <table>
@@ -27,4 +22,5 @@
         <th> Updated </th>
         <td> <%= @subject.updated_at %> </td>
     </tr>
+    
 </table>
