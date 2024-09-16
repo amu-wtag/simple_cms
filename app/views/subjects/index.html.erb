@@ -1,8 +1,9 @@
 <h1>Subjects#index</h1>
 
-<%= link_to("Add new Subject", '#', :class => 'action new')%>
+<%= link_to("Add new Subject", new_subject_path, :class => 'action new')%>
 <table class="listing">
     <tr class="header">
+        <th>#</th>
         <th>Subject</th>
         <th>Visible</th>
         <th>Pages</th>
@@ -16,8 +17,8 @@
         <td> <%= subject.pages.size%> </td>
         <td> 
             <%= link_to("Show", subject_path(subject), :class => 'action show') %> 
-            <%= link_to("Edit", '#', :class => 'action edit') %> 
-            <%= link_to("Delete", '#', :class => 'action delete') %> 
+            <%= link_to("Edit", edit_subject_path(subject), :class => 'action edit') %> 
+            <%= link_to("Delete", delete_subject_path(subject), :class => 'action delete') %> 
 
         </td>
     </tr> 
