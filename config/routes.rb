@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   get 'demo/hello'
   get 'demo/other_hello'
   get 'demo/welldev'
+  get 'demo/escape_output'
 
   resources :subjects do
     member do

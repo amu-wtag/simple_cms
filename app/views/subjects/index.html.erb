@@ -14,7 +14,8 @@
     <tr>
         <td> <%= subject.position %> </td>
         <td> <%= subject.name %> </td>
-        <td> <%= subject.visible ? 'Yes' : 'No' %> </td>
+        <!-- <td> <%= subject.visible ? 'Yes' : 'No' %> </td> -->
+        <td> <%= status_tag(subject.visible) %> </td>
         <td> <%= subject.pages.size%> </td>
         <td> 
             <%= link_to("Show", subject_path(subject), :class => 'action show') %> 
