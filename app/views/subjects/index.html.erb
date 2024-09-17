@@ -1,9 +1,9 @@
 <% @page_title = "All Subjects" %>
-<h1>Subjects#index</h1>
+<h2>Subjects#index</h2>
 
 <%= link_to("Add new Subject", new_subject_path, :class => 'action new')%>
 <table class="listing">
-    <tr class="header">
+    <tr>
         <th>#</th>
         <th>Subject</th>
         <th>Visible</th>
@@ -26,3 +26,7 @@
     </tr> 
     <% end %>
 </table>
+<div>
+    <span><b><%= link_to("Pages", pages_path) %></b> &nbsp;&nbsp;</span>
+    <span><b><%= link_to("Sections", sections_path) %></b></span>
+</div>

@@ -6,6 +6,9 @@
     <%= stylesheet_link_tag('admin', media: 'all') %>
 </head>
 <body>
+    <div class="header">
+        <h1>Simple CMS Admin</h1>
+    </div>
     <% if !flash[:notice].blank? %>
         <div class="notice">
             <%= flash[:notice] %>

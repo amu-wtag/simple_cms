@@ -2,7 +2,7 @@
 <h1>Section#index</h1>
 <%= link_to("Add new Section", new_section_path, :class => 'action new')%>
 <table class="listing">
-    <tr class="header">
+    <tr>
         <th>#</th>
         <th>Section</th>
         <th>Visible</th>
@@ -22,6 +22,11 @@
     </tr> 
     <% end %>
 </table>
+
+<div>
+    <span><b><%= link_to("Subjects", subjects_path) %></b> &nbsp;&nbsp; </span>
+    <span><b><%= link_to("Pages", pages_path) %></b></span>
+</div>
 
 <p>Current time: <%= Time.now.strftime("%I:%M:%S %p") %></p>
 <p>Current date: <%= Time.now.strftime("%B %d, %Y") %></p>

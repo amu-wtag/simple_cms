@@ -1,7 +1,7 @@
 class DemoController < ApplicationController
-  layout false
+  layout 'application'
 
-  $global_array = [1,2,34]
+  $global_array = [1, 2, 34]
   def index
     @id = params['id']
     @page = params[:page]
@@ -9,12 +9,12 @@ class DemoController < ApplicationController
   end
 
   def hello
-    @ar = [1,2,3,4,5]
+    @ar = [1, 2, 3, 4, 5]
     render('hello')
   end
 
   def other_hello
-    redirect_to(:action => 'hello')
+    redirect_to(action: 'hello')
   end
 
   def welldev

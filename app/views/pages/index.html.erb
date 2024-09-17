@@ -2,7 +2,7 @@
 
 <%= link_to("Add new Page", new_page_path, :class => 'action new')%>
 <table class="listing">
-    <tr class="header">
+    <tr>
         <th>#</th>
         <th>Page</th>
         <th>Visible</th>
@@ -23,3 +23,8 @@
     </tr> 
     <% end %>
 </table>
+
+<div>
+    <span><b><%= link_to("Subjects", subjects_path) %></b> &nbsp;&nbsp;</span>
+    <span><b><%= link_to("Sections", sections_path) %></b></span>
+</div>

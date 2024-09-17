@@ -9,17 +9,21 @@ html {
 
 body {
     font: 14px $sans_serif;
+    text-align: center;
 }
 
 th,td {
-    width: 120px; 
+    width: 250px; 
     text-align: center;
 }
 table, th,td {
+    text-align: center;
     border: 1px solid;
     border-collapse: collapse;
 }
-
+table {
+    margin: 1% 35% 1% 35%;
+}
 span.status{ 
     display: block; 
     width: 10px; 
@@ -32,7 +36,13 @@ span.status.true {
     background: green;
     color: green;
 }
-span.status.false {
+span.status.false { 
     background: red;
     color: red;
+}
+
+.header {
+    background-color: $yellow;
+    margin: 0% 0% 0% 0%;
+    padding: 10px;
 }
