@@ -1,11 +1,15 @@
+<%= error_messages_for(f.object) %>
 <table>
     <tr>
         <th> Name </th>
-        <td> <%= f.text_field(:name) %> </td>
+        <td>
+            <%= f.text_field(:name, required: true, placeholder: 'Enter subject name') %>
+            <span style="color: red">*</span>
+        </td>
     </tr>
     <tr>
         <th> Position </th>
-        <td> <%= f.text_field(:position) %> </td>
+        <td> <%= f.select(:position, 1..@subject_count, {}, {style: 'width: 180px;'}) %> </td>
     </tr>
     <tr>
         <th> Visible </th>

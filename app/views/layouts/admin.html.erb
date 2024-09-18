@@ -9,11 +9,12 @@
     <div class="header">
         <h1>Simple CMS Admin</h1>
     </div>
-    <% if !flash[:notice].blank? %>
-        <div class="notice">
+    <br>
+    <span style="color: green;">
+        <% if !flash[:notice].blank? %>
             <%= flash[:notice] %>
-        </div>
-    <% end %>
+        <% end %>
+    </span>
     <!-- before yield -->
     <%= yield %>
     <!--after yield -->

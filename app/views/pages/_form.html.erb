@@ -1,0 +1,25 @@
+<table>
+    <tr>
+        <th> Name </th>
+        <td> 
+            <%= fbuilder.text_field(:name, required: true, placeholder: 'Enter page name') %>
+            <span style="color: red">*</span>
+        </td>
+    </tr>
+    <tr>
+        <th> Subject </th>
+        <td> <%= fbuilder.select(:subject_id, @subjects.map{|s| [s.name, s.id]}) %> </td>
+    </tr>
+    <tr>
+        <th> Permalink </th>
+        <td> <%= fbuilder.text_field(:permalink) %> </td>
+    </tr>
+    <tr>
+        <th> Position </th>
+        <td> <%= fbuilder.select(:position, 1..@page_count) %> </td>
+    </tr>
+    <tr>
+        <th> Visible </th>
+        <td> <%= fbuilder.check_box :visible %> </td>
+    </tr>
+</table>
