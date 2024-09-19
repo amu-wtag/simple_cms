@@ -1,0 +1,78 @@
+es:
+  items:
+    one: "1 artículo"
+    other: "%{count} artículos"
+
+  # Subject
+  page_title:
+    all_subjects: "Todos los Temas"
+  subjects:
+    create:
+      success: "¡Tema creado con éxito!"
+    update:
+      success: "¡Tema actualizado con éxito!"
+    destroy:
+      success: "¡Tema '%{subject_name}' eliminado con éxito!"
+    add_new: "Agregar nuevo Tema"
+    show: "Mostrar"
+    edit: "Editar"
+    delete: "Eliminar"
+  navigation:
+    pages: "Páginas"
+    sections: "Secciones"
+  status:
+    yes: "Sí"
+    no: "No"
+
+  # Page 
+  pages:
+    create:
+      success: "¡Página creada con éxito!"
+    update:
+      success: "¡Página actualizada con éxito!"
+    destroy:
+      success: "¡Página '%{page_name}' eliminada con éxito!"
+    index:
+      title: "Páginas#index"
+      add_new_page: "Añadir nueva Página"
+      columns:
+        number: "#"
+        page: "Página"
+        visible: "Visible"
+        actions: "Acciones"
+      status:
+        visible: "Visible"
+        hidden: "Oculto"
+      actions:
+        show: "Mostrar"
+        edit: "Editar"
+        delete: "Eliminar"
+    subjects:
+      title: "Temas"
+    sections:
+      title: "Secciones"
+
+  # Section
+  sections:
+    create:
+      success: "¡Sección creada con éxito!"
+    update:
+      success: "¡Sección actualizada con éxito!"
+    destroy:
+      success: "¡Sección '%{section_name}' eliminada con éxito!"
+    index:
+      title: "Sección#index"
+      add_new: "Agregar nueva Sección"
+      visible: "Visible"
+      show: "Mostrar"
+      edit: "Editar"
+      delete: "Eliminar"
+      subjects: "Temas"
+      pages: "Páginas"
+  link:
+    english: "Inglés"
+    spanish: "Español"
+    bengali: "Bengalí"
+  date_time:
+    current_time: "Hora actual: %{time}"
+    current_date: "Fecha actual: %{date}"

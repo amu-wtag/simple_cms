@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   layout 'admin'
+
   def index
     @pages = Page.sorted
   end
@@ -17,8 +18,8 @@ class PagesController < ApplicationController
   def create
     @page = Page.new(page_params)
     if @page.save
+      flash[:notice] = t('pages.create.success')
       redirect_to pages_path
-      flash[:notice] = 'Page created successfully!'
     else
       @page_count = Page.count + 1
       @subjects = Subject.sorted
@@ -36,7 +37,7 @@ class PagesController < ApplicationController
     @page = Page.find(params[:id])
 
     if @page.update(page_params)
-      flash[:notice] = 'Page updated successfully!'
+      flash[:notice] = t('pages.update.success')
       redirect_to pages_path
     else
       @page_count = Page.count
@@ -52,7 +53,7 @@ class PagesController < ApplicationController
   def destroy
     @page = Page.find(params[:id])
     @page.destroy
-    flash[:notice] = 'Page updated successfully!'
+    flash[:notice] = t('pages.destroy.success', page_name: @page.name)
     redirect_to pages_path
   end
 

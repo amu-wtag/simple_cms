@@ -1,0 +1,79 @@
+bn:
+  items:
+    one: "১ টি আইটেম"
+    other: "%{count} টি আইটেম"
+  
+  #Subject
+  page_title:
+    all_subjects: "সব বিষয়"
+  subjects:
+    create:
+      success: "বিষয় সফলভাবে তৈরি হয়েছে!"
+    update:
+      success: "বিষয় সফলভাবে আপডেট হয়েছে!"
+    destroy:
+      success: "বিষয় '%{subject_name}' সফলভাবে মুছে ফেলা হয়েছে!"
+    add_new: "নতুন বিষয় যোগ করুন"
+    show: "প্রদর্শন"
+    edit: "সম্পাদনা"
+    delete: "মুছে ফেলুন"
+  navigation:
+    pages: "পেজসমূহ"
+    sections: "সেকশনসমূহ"
+  status:
+    yes: "হ্যাঁ"
+    no: "না"
+  
+  #Page
+  pages:
+    create:
+      success: "পৃষ্ঠা সফলভাবে তৈরি হয়েছে!"
+    update:
+      success: "পৃষ্ঠা সফলভাবে আপডেট হয়েছে!"
+    destroy:
+      success: "পৃষ্ঠা '%{page_name}' সফলভাবে মুছে ফেলা হয়েছে!"
+    index:
+      title: "পৃষ্ঠাসমূহ#index"
+      add_new_page: "নতুন পৃষ্ঠা যোগ করুন"
+      columns:
+        number: "#"
+        page: "পৃষ্ঠা"
+        visible: "দৃশ্যমান"
+        actions: "ক্রিয়াকলাপ"
+      status:
+        visible: "দৃশ্যমান"
+        hidden: "অদৃশ্য"
+      actions:
+        show: "দেখান"
+        edit: "সম্পাদনা"
+        delete: "মুছুন"
+    subjects:
+      title: "বিষয়সমূহ"
+    sections:
+      title: "অধ্যায়সমূহ"
+
+  #Section
+  sections:
+    create:
+      success: "অধ্যায় সফলভাবে তৈরি হয়েছে!"
+    update:
+      success: "অধ্যায় সফলভাবে আপডেট হয়েছে!"
+    destroy:
+      success: "অধ্যায় '%{section_name}' সফলভাবে মুছে ফেলা হয়েছে!"
+    index:
+      title: "সেকশন#index"
+      add_new: "নতুন সেকশন যোগ করুন"
+      visible: "দেখা যাচ্ছে"
+      show: "দেখান"
+      edit: "সম্পাদনা করুন"
+      delete: "মুছে ফেলুন"
+      subjects: "বিষয়সমূহ"
+      pages: "পেজসমূহ"
+      
+  link:
+    english: "ইংরেজি"
+    spanish: "স্প্যানিশ"
+    bengali: "বাংলা"
+  date_time:
+    current_time: "বর্তমান সময়: %{time}"
+    current_date: "বর্তমান তারিখ: %{date}"

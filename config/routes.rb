@@ -39,6 +39,17 @@ Rails.application.routes.draw do
       get :delete
     end
   end
+
+  # Modify Routes to Include Locale Scope
+  Rails.application.routes.draw do
+    scope '(:locale)', locale: /en|es|bn/ do
+      # Your routes here
+      resources :subjects
+      resources :pages
+      resources :sections
+    end
+  end
+
   # default route (may go away in future versions)
   # get ':controller(/:action(/:id))'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

@@ -255,6 +255,7 @@ DEPENDENCIES
   bootsnap (>= 1.7.0)
   byebug
   capybara (>= 3.37)
+  i18n
   importmap-rails
   jbuilder (~> 2.7)
   listen (~> 3.7)

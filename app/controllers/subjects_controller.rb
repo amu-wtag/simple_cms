@@ -1,5 +1,6 @@
 class SubjectsController < ApplicationController
   layout 'admin'
+
   def index
     @subjects = Subject.sorted
     # render('index') #by default rails will look for index
@@ -17,7 +18,7 @@ class SubjectsController < ApplicationController
   def create
     @subject = Subject.new(subject_params)
     if @subject.save
-      flash[:notice] = 'Subject created successfully!'
+      flash[:notice] = t('subjects.create.success')
       redirect_to(subjects_path)
     else
       @subject_count = Subject.count
@@ -34,7 +35,7 @@ class SubjectsController < ApplicationController
     @subject = Subject.find(params[:id])
 
     if @subject.update(subject_params)
-      flash[:notice] = 'Subject updated successfully!'
+      flash[:notice] = t('subjects.update.success')
       redirect_to(subject_path(@subject))
     else
       @subject_count = Subject.count
@@ -49,7 +50,7 @@ class SubjectsController < ApplicationController
   def destroy
     @subject = Subject.find(params[:id])
     @subject.destroy
-    flash[:notice] = "Subject '#{@subject.name}' deleted successfully!"
+    flash[:notice] = t('subjects.destroy.success', subject_name: @subject.name)
     redirect_to subjects_path
   end
 
