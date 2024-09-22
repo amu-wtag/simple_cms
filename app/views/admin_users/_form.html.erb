@@ -1,0 +1,23 @@
+<%= error_messages_for(fbuilder.object) %>
+<table>
+    <tr>
+        <th> <%= fbuilder.label :first_name %></th>
+        <td> <%= fbuilder.text_field :first_name %></td>
+    </tr>
+    <tr>
+        <th> <%= fbuilder.label :last_name %></th>
+        <td> <%= fbuilder.text_field :last_name %></td>
+    </tr>
+    <tr>
+        <th> <%= fbuilder.label :email %></th>
+        <td> <%= fbuilder.text_field :email %></td>
+    </tr>
+    <tr>
+        <th> <%= fbuilder.label :username %></th>
+        <td> <%= fbuilder.text_field :username %></td>
+    </tr>
+    <tr>
+        <th> <%= fbuilder.label :password %></th>
+        <td> <%= fbuilder.password_field :password %></td>
+    </tr>
+</table>

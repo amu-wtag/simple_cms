@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
-  root 'demo#index' # will render when http://localhost:3000/ is browsed
+  root 'public#index' # will render when http://localhost:3000/ is browsed
+
+  get 'show/:permalink', to: 'public#show'
 
   get 'demo/index'
   get 'demo/hello'
@@ -47,8 +49,20 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :admin_users, except: [:show] do
+    member do
+      get :delete
+    end
+  end
+
   # Modify Routes to Include Locale Scope
   Rails.application.routes.draw do
+    get 'pubilc/index'
+    get 'pubilc/show'
+    get 'admin_users/index'
+    get 'admin_users/new'
+    get 'admin_users/edit'
+    get 'admin_users/delete'
     get 'access/menu'
     get 'access/login'
     scope '(:locale)', locale: /en|es|bn/ do

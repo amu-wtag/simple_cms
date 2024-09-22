@@ -4,7 +4,9 @@
 
     <%= image_tag('plus2.png', size: '15x15', alt: '+') %>
 
-    <span style="font-size: 20px"><%= link_to(t('subjects.add_new'), new_subject_path, class: 'action new') %></span>
+    <span style="font-size: 20px">
+        <%= link_to(t('subjects.add_new'), new_subject_path, class: 'action new') %>
+    </span>
     <table class="listing">
         <tr>
             <th>#</th>
