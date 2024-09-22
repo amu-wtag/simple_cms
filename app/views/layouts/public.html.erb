@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple CMS: <%= @page_title || "Admin Area" %> </title>
+    <%= stylesheet_link_tag('application', media: 'all') %>
+</head>
+<body>
+    <div class="header">
+        <h1>Simple CMS</h1>
+    </div>
+    <div>
+        <span style="color: green;">
+            <% if !flash[:notice].blank? %>
+                <%= flash[:notice] %>
+            <% end %>
+        </span>
+    </div>
+    <br>
+    
+    <!-- before yield -->
+    <%= yield %>
+    <!--after yield -->
+</body>
+</html>

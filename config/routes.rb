@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'public#index' # will render when http://localhost:3000/ is browsed
+  root to: 'public#index' # will render when http://localhost:3000/ is browsed
 
   get 'show/:permalink', to: 'public#show'
 
