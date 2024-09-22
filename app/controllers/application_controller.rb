@@ -12,4 +12,13 @@ class ApplicationController < ActionController::Base
   def default_url_options
     { locale: I18n.locale }
   end
+
+  private
+
+  def confirm_logged_in
+    return if session[:user_id]
+
+    flash[:notice] = 'Please log in.'
+    redirect_to access_login_path
+  end
 end

@@ -1,5 +1,7 @@
 class AccessController < ApplicationController
   layout 'admin'
+
+  before_action :confirm_logged_in, except: %i[login attempt_login logout]
   def menu; end
 
   def login; end

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   layout 'admin'
 
+  before_action :confirm_logged_in
   # find_subjects method runs before the other methods
   before_action :find_subjects, only: %i[new create edit update]
 
