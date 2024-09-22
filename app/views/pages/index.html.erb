@@ -1,30 +1,36 @@
-<h1>Pages#index</h1>
-
-<%= link_to("Add new Page", new_page_path, :class => 'action new')%>
-<table class="listing">
-    <tr>
-        <th>#</th>
-        <th>Page</th>
-        <th>Visible</th>
-        <th>Actions</th>
-    </tr>
-    <% @pages.each do |page| %>
-    <tr>
-        <td> <%= page.position %> </td>
-        <td> <%= page.name %> </td>
-        <!-- <td> <%= page.visible ? 'Yes' : 'No' %> </td> -->
-        <td> <%= status_tag(page.visible) %> </td>
-        <td> 
-            <%= link_to("Show", page_path(page), :class => 'action show') %> 
-            <%= link_to("Edit", edit_page_path(page), :class => 'action edit') %> 
-            <%= link_to("Delete", delete_page_path(page), :class => 'action delete') %> 
-
-        </td>
-    </tr> 
-    <% end %>
-</table>
-
 <div>
+    <h1>Pages#index</h1>
+
+    <%= link_to("Add new Page", new_page_path, :class => 'action new')%>
+    <table class="listing">
+        <tr>
+            <th>#</th>
+            <th>Page</th>
+            <th>Visible</th>
+            <th>Actions</th>
+        </tr>
+        <% @pages.each do |page| %>
+        <tr>
+            <td> <%= page.position %> </td>
+            <td> <%= page.name %> </td>
+            <!-- <td> <%= page.visible ? 'Yes' : 'No' %> </td> -->
+            <td> <%= status_tag(page.visible) %> </td>
+            <td> 
+                <%= link_to("Show", page_path(page), :class => 'action show') %> 
+                <%= link_to("Edit", edit_page_path(page), :class => 'action edit') %> 
+                <%= link_to("Delete", delete_page_path(page), :class => 'action delete') %> 
+
+            </td>
+        </tr> 
+        <% end %>
+    </table>
+
     <span><b><%= link_to("Subjects", subjects_path) %></b> &nbsp;&nbsp;</span>
     <span><b><%= link_to("Sections", sections_path) %></b></span>
+
+    <div class = "footer">
+        <p><%= t('date_time.current_time', time: Time.now.strftime("%I:%M:%S %p")) %></p>
+        <p><%= t('date_time.current_date', date: Time.now.strftime("%B %d, %Y")) %></p>
+    </div>
+    
 </div>

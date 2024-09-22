@@ -4,6 +4,7 @@ module ApplicationHelper
   end
 
   def status_tag(_flg, options = {})
+    options = options.dup # Duplicate the options hash to prevent modifying frozen hash
     options[:true_text] ||= ''
     options[:false_text] ||= ''
 

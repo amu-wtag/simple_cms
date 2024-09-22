@@ -1,36 +1,38 @@
-<h3>
-    <%= link_to t('link.english'), url_for(locale: 'en') %> |
-    <%= link_to t('link.spanish'), url_for(locale: 'es') %> |
-    <%= link_to t('link.bengali'), url_for(locale: 'bn') %>
-</h3>
-
-<h1><%= t('sections.index.title') %></h1>
-<%= link_to(t('sections.index.add_new'), new_section_path, class: 'action new') %>
-<table class="listing">
-    <tr>
-        <th>#</th>
-        <th><%= t('sections.index.section') %></th>
-        <th><%= t('sections.index.visible') %></th>
-        <th><%= t('sections.index.actions') %></th>
-    </tr>
-    <% @sections.each do |section| %>
-    <tr>
-        <td> <%= section.position %> </td>
-        <td> <%= section.name %> </td>
-        <td> <%= status_tag(section.visible) %> </td>
-        <td>
-            <%= link_to(t('sections.index.show'), section_path(section), class: 'action show') %>
-            <%= link_to(t('sections.index.edit'), edit_section_path(section), class: 'action edit') %>
-            <%= link_to(t('sections.index.delete'), delete_section_path(section), class: 'action delete') %>
-        </td>
-    </tr>
-    <% end %>
-</table>
-
 <div>
+    <h3>
+        <%= link_to t('link.english'), url_for(locale: 'en') %> |
+        <%= link_to t('link.spanish'), url_for(locale: 'es') %> |
+        <%= link_to t('link.bengali'), url_for(locale: 'bn') %>
+    </h3>
+
+    <h1><%= t('sections.index.title') %></h1>
+    <%= link_to(t('sections.index.add_new'), new_section_path, class: 'action new') %>
+    <table class="listing">
+        <tr>
+            <th>#</th>
+            <th><%= t('sections.index.section') %></th>
+            <th><%= t('sections.index.visible') %></th>
+            <th><%= t('sections.index.actions') %></th>
+        </tr>
+        <% @sections.each do |section| %>
+        <tr>
+            <td> <%= section.position %> </td>
+            <td> <%= section.name %> </td>
+            <td> <%= status_tag(section.visible) %> </td>
+            <td>
+                <%= link_to(t('sections.index.show'), section_path(section), class: 'action show') %>
+                <%= link_to(t('sections.index.edit'), edit_section_path(section), class: 'action edit') %>
+                <%= link_to(t('sections.index.delete'), delete_section_path(section), class: 'action delete') %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
     <span><b><%= link_to(t('sections.index.subjects'), subjects_path) %></b> &nbsp;&nbsp; </span>
     <span><b><%= link_to(t('sections.index.pages'), pages_path) %></b></span>
-</div>
 
-<p><%= t('date_time.current_time', time: Time.now.strftime("%I:%M:%S %p")) %></p>
-<p><%= t('date_time.current_date', date: Time.now.strftime("%B %d, %Y")) %></p>
+    <div class = "footer">
+        <p><%= t('date_time.current_time', time: Time.now.strftime("%I:%M:%S %p")) %></p>
+        <p><%= t('date_time.current_date', date: Time.now.strftime("%B %d, %Y")) %></p>
+    </div>
+</div>

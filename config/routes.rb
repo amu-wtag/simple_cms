@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  root 'demo#index' # will render when http://localhost:3000/ is browsed
+
+  get 'demo/index'
+  get 'demo/hello'
+  get 'demo/other_hello'
+  get 'demo/welldev'
+  get 'demo/escape_output'
+
+  get 'admin', to: 'access#menu'
+  get 'access/menu'
+  get 'access/login'
+  post 'access/attempt_login'
+  get 'access/logout'
+
   get 'sections/index'
   get 'sections/show'
   get 'sections/new'
@@ -14,13 +28,6 @@ Rails.application.routes.draw do
   # get 'subjects/new'
   # get 'subjects/edit'
   # get 'subjects/delete'
-
-  root 'demo#index' # will render when http://localhost:3000/ is browsed
-  get 'demo/index'
-  get 'demo/hello'
-  get 'demo/other_hello'
-  get 'demo/welldev'
-  get 'demo/escape_output'
 
   resources :subjects do
     member do
@@ -42,6 +49,8 @@ Rails.application.routes.draw do
 
   # Modify Routes to Include Locale Scope
   Rails.application.routes.draw do
+    get 'access/menu'
+    get 'access/login'
     scope '(:locale)', locale: /en|es|bn/ do
       # Your routes here
       resources :subjects

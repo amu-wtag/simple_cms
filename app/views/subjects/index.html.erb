@@ -1,32 +1,38 @@
-<% @page_title = t('page_title.all_subjects') %>
-<h2><%= t('subjects.index') %></h2>
-
-<%= image_tag('plus2.png', size: '15x15', alt: '+') %>
-
-<span style="font-size: 20px"><%= link_to(t('subjects.add_new'), new_subject_path, class: 'action new') %></span>
-<table class="listing">
-    <tr>
-        <th>#</th>
-        <th><%= t('subjects.subject') %></th>
-        <th><%= t('subjects.visible') %></th>
-        <th><%= t('subjects.pages') %></th>
-        <th><%= t('subjects.actions') %></th>
-    </tr>
-    <% @subjects.each do |subject| %>
-    <tr>
-        <td> <%= subject.position %> </td>
-        <td> <%= subject.name %> </td>
-        <td> <%= status_tag(subject.visible, t('status')) %> </td>
-        <td> <%= subject.pages.size %> </td>
-        <td> 
-            <%= link_to(t('subjects.show'), subject_path(subject), class: 'action show') %> 
-            <%= link_to(t('subjects.edit'), edit_subject_path(subject), class: 'action edit') %> 
-            <%= link_to(t('subjects.delete'), delete_subject_path(subject), class: 'action delete') %> 
-        </td>
-    </tr> 
-    <% end %>
-</table>
 <div>
+    <% @page_title = t('page_title.all_subjects') %>
+    <h2><%= t('subjects.index') %></h2>
+
+    <%= image_tag('plus2.png', size: '15x15', alt: '+') %>
+
+    <span style="font-size: 20px"><%= link_to(t('subjects.add_new'), new_subject_path, class: 'action new') %></span>
+    <table class="listing">
+        <tr>
+            <th>#</th>
+            <th><%= t('subjects.subject') %></th>
+            <th><%= t('subjects.visible') %></th>
+            <th><%= t('subjects.pages') %></th>
+            <th><%= t('subjects.actions') %></th>
+        </tr>
+        <% @subjects.each do |subject| %>
+        <tr>
+            <td> <%= subject.position %> </td>
+            <td> <%= subject.name %> </td>
+            <td> <%= status_tag(subject.visible, t('status')) %> </td>
+            <td> <%= subject.pages.size %> </td>
+            <td> 
+                <%= link_to(t('subjects.show'), subject_path(subject), class: 'action show') %> 
+                <%= link_to(t('subjects.edit'), edit_subject_path(subject), class: 'action edit') %> 
+                <%= link_to(t('subjects.delete'), delete_subject_path(subject), class: 'action delete') %> 
+            </td>
+        </tr> 
+        <% end %>
+    </table>
     <span><b><%= link_to(t('navigation.pages'), pages_path) %></b> &nbsp;&nbsp;</span>
     <span><b><%= link_to(t('navigation.sections'), sections_path) %></b></span>
+
+    <div class = "footer">
+        <p><%= t('date_time.current_time', time: Time.now.strftime("%I:%M:%S %p")) %></p>
+        <p><%= t('date_time.current_date', date: Time.now.strftime("%B %d, %Y")) %></p>
+    </div>
+
 </div>

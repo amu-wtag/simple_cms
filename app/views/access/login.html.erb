@@ -1,0 +1,20 @@
+<% @page_title = "Admin Login" %>
+
+<div>
+  <%= form_with url: access_attempt_login_path, method: :post, local: true do |f| %>
+    <table>
+      <tr>
+        <td><%= f.label :username %></td>
+        <td><%= f.text_field :username, value: params[:username] %></td>
+      </tr>
+      <tr>
+        <td><%= f.label :password %></td>
+        <td><%= f.password_field :password %></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><%= f.submit "Login" %></td>
+      </tr>
+    </table>
+  <% end %>
+</div>
