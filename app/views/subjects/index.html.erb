@@ -34,9 +34,7 @@
         </tr> 
         <% end %>
     </table>
-    <span><b><%= link_to(t('navigation.pages'), pages_path) %></b> &nbsp;&nbsp;</span>
-    <span><b><%= link_to(t('navigation.sections'), sections_path) %></b></span>
-
+   
     <div class = "footer">
         <p><%= t('date_time.current_time', time: Time.now.strftime("%I:%M:%S %p")) %></p>
         <p><%= t('date_time.current_date', date: Time.now.strftime("%B %d, %Y")) %></p>
