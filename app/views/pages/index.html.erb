@@ -1,10 +1,10 @@
 <div>
     <h4>
-        <%= link_to("<< Back to Menu", admin_path, :class => 'back-link') %>
+        <%= link_to("<< Back to Subjects", subjects_path, :class => 'back-link') %>
     </h4>
     <h2>Pages#index</h2>
 
-    <%= link_to("Add new Page", new_page_path, :class => 'action new')%>
+    <%= link_to("Add new Page", new_page_path(subject_id: @subject.id), :class => 'action new')%>
     <table class="listing">
         <tr>
             <th>#</th>
@@ -19,9 +19,9 @@
             <!-- <td> <%= page.visible ? 'Yes' : 'No' %> </td> -->
             <td> <%= status_tag(page.visible) %> </td>
             <td> 
-                <%= link_to("Show", page_path(page), :class => 'action show') %> 
-                <%= link_to("Edit", edit_page_path(page), :class => 'action edit') %> 
-                <%= link_to("Delete", delete_page_path(page), :class => 'action delete') %> 
+                <%= link_to("Show", page_path(page, subject_id: @subject.id), :class => 'action show') %> 
+                <%= link_to("Edit", edit_page_path(page, subject_id: @subject.id), :class => 'action edit') %> 
+                <%= link_to("Delete", delete_page_path(page, subject_id: @subject.id), :class => 'action delete') %> 
 
             </td>
         </tr> 

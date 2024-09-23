@@ -7,6 +7,8 @@ bn:
   page_title:
     all_subjects: "সব বিষয়"
   subjects:
+    view:
+      pages: "পৃষ্ঠা দেখুন"
     create:
       success: "বিষয় সফলভাবে তৈরি হয়েছে!"
     update:

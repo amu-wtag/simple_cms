@@ -20,17 +20,19 @@ div {
     padding: 10px;
 }
 th,td {
-    width: 250px; 
+    padding: 10px;
     text-align: center;
 }
+
 table, th,td {
+    width: auto;
     text-align: center;
     border: 1px solid;
     border-collapse: collapse;
 }
-// table {
-//     margin: 1% 35% 1% 35%;
-// }
+table {
+    margin-bottom: 5px;
+}
 span.status{ 
     display: block; 
     width: 10px; 

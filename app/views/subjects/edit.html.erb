@@ -1,11 +1,10 @@
-<%= link_to("<< Back to list", subjects_path, :class => 'back-link') %>
-
 <div class="subjects edit">
+    <h4><%= link_to("<< Back to list", subjects_path, :class => 'back-link') %></h4>
+
     <h1>Update Subject</h1>
     <%= form_for(@subject) do |f| %>
-    <%= render partial: "form", locals: {f: f} %>
-    <div class="form-buttons">
+        <%= render partial: "form", locals: {f: f} %>
+
         <%= f.submit("Update Subject") %>
-    </div>
     <% end %>
 </div>

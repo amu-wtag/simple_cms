@@ -1,10 +1,11 @@
 <div class="pages edit">
-    <h5><%= link_to("<< Back to list", pages_path, :class => 'back-link') %></h5>
+    <h4><%= link_to("<< Back to list", pages_path(subject_id: @subject.id), :class => 'back-link') %></h4>
     <h1>Update Page</h1>
-    <%= form_for(@page) do |f| %>
+    <%= form_for(@page, url: page_path(@page, subject_id: @subject.id)) do |f| %>
+        
         <%= render partial: "form", locals: {fbuilder: f} %>
-        <div class="form-buttons">
-            <%= f.submit("Update Page") %>
-        </div>
+        
+        <%= f.submit("Update Page") %>
+        
     <% end %>
 </div>

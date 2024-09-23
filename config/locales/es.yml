@@ -7,6 +7,8 @@ es:
   page_title:
     all_subjects: "Todos los Temas"
   subjects:
+    view:
+      pages: "Ver Páginas"
     create:
       success: "¡Tema creado con éxito!"
     update:

@@ -1,5 +1,5 @@
 <div>
-    <%= link_to("<< Back to list", pages_path, :class => 'back-link') %>
+    <h4> <%= link_to("<< Back to list", pages_path(subject_id: @subject.id), :class => 'back-link') %> </h4>
 
     <table>
         <tr>

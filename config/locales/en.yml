@@ -11,6 +11,8 @@ en:
 
   #Subject
   subjects:
+    view:
+      pages: "View Pages"
     create:
       success: "Subject created successfully!"
     update:
