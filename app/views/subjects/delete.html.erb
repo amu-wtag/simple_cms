@@ -2,7 +2,7 @@
 
 <div>
     <h2>Delete Subject</h2>
-    <%= form_for(@subject, :method => 'delete') do |f| %>
+    <%= form_for(@subject, method: :delete) do |f| %>
         <p>Are you sure you want to permanently delete the Subject named <b><%= f.object.name %></b>?</p>
         <div>
             <%= f.submit("Delete Subject", style: "background-color: red; color: white;") %>

@@ -43,7 +43,7 @@ class PagesController < ApplicationController
     if @page.update(page_params)
       flash[:notice] = t('pages.update.success')
       # redirect_to page_path(@page)
-      redirect_to page_path(@page, subject_id: @subject.id)
+      redirect_to pages_path(@page, subject_id: @subject.id)
     else
       @page_count = Page.count
       render('edit')

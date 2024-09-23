@@ -30,7 +30,7 @@ gem 'bcrypt', '~> 3.1.20'
 gem 'bootsnap', '>= 1.7.0', require: false
 
 gem 'i18n'
-
+gem 'pry'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

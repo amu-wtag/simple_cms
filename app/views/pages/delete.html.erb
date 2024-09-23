@@ -1,5 +1,5 @@
 <div>
-    <%= link_to("<< Back to list", pages_path, :class => 'back-link') %>
+    <h4><%= link_to("<< Back to list", pages_path(subject_id: @subject.id), :class => 'back-link') %></h4>
 
     <h2>Delete Page</h2>
     <%= form_for(@page, url: page_path(@page, subject_id: @subject.id), method: :delete) do |f| %>
