@@ -1,4 +1,7 @@
 <div>
+    <h4>
+        <%= link_to("<< Back to Menu", admin_path, :class => 'back-link') %>
+    </h4>
     <h3>
         <%= link_to t('link.english'), url_for(locale: 'en') %> |
         <%= link_to t('link.spanish'), url_for(locale: 'es') %> |

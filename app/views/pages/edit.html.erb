@@ -1,6 +1,5 @@
-<%= link_to("<< Back to list", pages_path, :class => 'back-link') %>
-
 <div class="pages edit">
+    <h5><%= link_to("<< Back to list", pages_path, :class => 'back-link') %></h5>
     <h1>Update Page</h1>
     <%= form_for(@page) do |f| %>
         <%= render partial: "form", locals: {fbuilder: f} %>

@@ -1,14 +1,17 @@
-<% @page_title = @page.name %>
+<div>
+    <% @page_title = @page.name %>
 
-<h2> <%= @page.name %></h2>
+    <h2> <%= @page.name %></h2>
 
-<% @page.sections.visible.sorted.each do |section| %>
-    <div>
-        <% case section.content_type %>
-        <% when 'HTML' %>
-            <%= raw(saznitize(section.content, tags: ['strong', 'em', 'a'])) %>
-        <% when 'text' %>
-            <%= simple_format(section.content) %>
-        <% end %>
-    </div>
-<% end %>
+    <% @page.sections.visible.sorted.each do |section| %>
+        <div>
+            <% case section.content_type %>
+                <p> section.content </p>
+                <% when 'HTML' %>
+                    <%= raw(saznitize(section.content, tags: ['strong', 'em', 'a'])) %>
+                <% when 'text' %>
+                    <%= simple_format(section.content) %>
+            <% end %>
+        </div>
+    <% end %>
+</div>

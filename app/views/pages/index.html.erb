@@ -1,5 +1,8 @@
 <div>
-    <h1>Pages#index</h1>
+    <h4>
+        <%= link_to("<< Back to Menu", admin_path, :class => 'back-link') %>
+    </h4>
+    <h2>Pages#index</h2>
 
     <%= link_to("Add new Page", new_page_path, :class => 'action new')%>
     <table class="listing">
