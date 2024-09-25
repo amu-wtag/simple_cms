@@ -1,4 +1,5 @@
 class Section < ApplicationRecord
+  acts_as_list
   belongs_to :page, optional: true
   has_many :section_edits
   has_many :admin_users, through: :section_edits

@@ -1,4 +1,5 @@
 class Subject < ApplicationRecord
+  acts_as_list
   # has_one :page# 1 to 1
   has_many :pages # 1 to many
 

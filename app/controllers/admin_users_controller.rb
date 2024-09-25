@@ -50,4 +50,11 @@ class AdminUsersController < ApplicationController
   def admin_user_params
     params.require(:admin_user).permit(:first_name, :last_name, :email, :username, :password)
   end
+
+  def confirm_logged_in
+    return if session[:user_id]
+
+    flash[:notice] = 'Please log in.'
+    redirect_to access_login_path
+  end
 end

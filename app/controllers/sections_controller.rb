@@ -2,7 +2,7 @@ class SectionsController < ApplicationController
   layout 'admin'
 
   before_action :confirm_logged_in
-  before_action :find_page
+  before_action :find_page, only: %i[new create]
 
   def index
     # @sections = Section.sorted
